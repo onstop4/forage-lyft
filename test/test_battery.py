@@ -24,7 +24,7 @@ class TestNubbin(unittest.TestCase):
 class TestSpindler(unittest.TestCase):
     def test_should_be_serviced(self):
         today = datetime.now()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
 
         battery = SpindlerBattery(last_service_date, today)
         self.assertTrue(battery.needs_service())
